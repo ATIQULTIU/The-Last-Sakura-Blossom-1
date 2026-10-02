@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Sakura Blossom</title>
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+    
+  <body>
+  <!-- Haiku Poem -->
+  <div class="haiku" lang="jp">
+    花は散り<br>
+    名を覚えている<br>
+    風ばかり
+  </div>
+
+  <!-- Scene Elements -->
+  <img class="person" src="https://raw.githubusercontent.com/BlackStar1991/Pictures-for-sharing-/master/Japan/person.png" alt="man">
+
+  <div class="block">
+    <img class="girl" src="https://raw.githubusercontent.com/BlackStar1991/Pictures-for-sharing-/master/Japan/girl.png" alt="girl">
+    <img src="https://raw.githubusercontent.com/BlackStar1991/Pictures-for-sharing-/master/Japan/bg.png" alt="roof" class="roof">
+  </div>
+
+  <canvas id="scene"></canvas>
+
+  <!-- Interactive UI Overlay -->
+  <div class="ui-container">
+    <div class="music-player">
+      <button id="musicToggle" class="icon-btn" title="Toggle Music">
+        <i class="fas fa-music"></i>
+      </button>
+      <span class="music-label">Sakura Serenade</span>
+    </div>
+
+    <button id="themeToggle" class="icon-btn" title="Toggle Day/Night Mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </div>
+
+  <!-- Developer Card Badge -->
+  <div class="dev-card">
+    <div class="dev-title">Developer Info</div>
+    <div class="dev-name">MD.Atiqul Islam (Atik)</div>
+    <div class="dev-links">
+      <a href="mailto:cmttiu1001@gmail.com" target="_blank"><i class="fas fa-envelope"></i> cmttiu1001@gmail.com</a>
+      <a href="https://github.com/ATIQULTIU" target="_blank"><i class="fab fa-github"></i> github.com/ATIQULTIU</a>
+    </div>
+  </div>
+
+  <!-- Ambient Audio Source & Logic -->
+  <script src="./script.js"></script>
+
+  </body>
+  
+</html>

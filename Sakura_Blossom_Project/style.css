@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  transition: background-color 1s ease;
+  user-select: none;
+}
+
+body.night-mode {
+  background-color: #0d1117 !important;
+}
+
+.person {
+  position: absolute;
+  right: 45%;
+  bottom: 0;
+  height: 50vh;
+  object-fit: contain;
+  z-index: 1;
+  user-select: none;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.1));
+}
+
+.block {
+  height: 100%;
+  position: absolute;
+  width: 50%;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.roof {
+  display: block;
+  align-self: flex-start;
+  height: 60vh;
+  width: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+.girl {
+  position: absolute;
+  left: 30%;
+  display: block;
+  height: 70vh;
+  width: auto;
+  object-fit: contain;
+  margin-right: 20px;
+  user-select: none;
+}
+
+.haiku {
+  position: absolute;
+  top: 5dvh;
+  left: 80px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS Mincho", serif;
+  font-size: 32px;
+  line-height: 2.2;
+  color: #111;
+  letter-spacing: 0.08em;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  font-weight: 500;
+  user-select: none;
+  transition: color 1s ease;
+  z-index: 2;
+}
+
+body.night-mode .haiku {
+  color: #e6edf3;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+}
+
+#scene {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 0;
+}
+
+/* UI Controls Overlay */
+.ui-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  z-index: 10;
+}
+
+.icon-btn {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(214, 97, 97, 0.3);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  color: #d66161;
+  font-size: 18px;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: #d66161;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(214, 97, 97, 0.4);
+}
+
+.music-player {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 4px 16px 4px 4px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(214, 97, 97, 0.3);
+}
+
+.music-player .icon-btn {
+  box-shadow: none;
+  border: none;
+}
+
+.music-label {
+  margin-left: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Developer Card */
+.dev-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+  border-left: 4px solid #d66161;
+  z-index: 10;
+  font-family: system-ui, -apple-system, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.dev-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+.dev-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #888;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.dev-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.dev-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dev-links a {
+  color: #444;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.dev-links a:hover {
+  color: #d66161;
+}
+
+body.night-mode .dev-card,
+body.night-mode .music-player,
+body.night-mode .icon-btn {
+  background: rgba(22, 27, 34, 0.85);
+  color: #e6edf3;
+  border-color: rgba(214, 97, 97, 0.5);
+}
+
+body.night-mode .dev-name,
+body.night-mode .music-label {
+  color: #e6edf3;
+}
+
+body.night-mode .dev-links a {
+  color: #8b949e;
+}
+
+body.night-mode .dev-links a:hover {
+  color: #ff7b72;
+}
